@@ -1,6 +1,5 @@
 <div class='main-nav'>
     <div class='navbar navbar-inverse'>
-        <img src="/img/logo.png" />
         <div class='navbar-header'>
             <button type='button' class='navbar-toggle' data-toggle='collapse' data-target='.navbar-collapse'>
                 <span class='sr-only'>Toggle navigation</span>
@@ -8,7 +7,10 @@
                 <span class='icon-bar'></span>
                 <span class='icon-bar'></span>
             </button>
-            <a class='navbar-brand' [routerLink]="['/home']">Alpine</a>
+            <a class="navbar-brand" href="#">
+                <img src="/img/logo.png" width="30" />
+            </a>
+            <a class='navbar-brand' [routerLink]="['/home']">Alpine Animal Hospital</a>
         </div>
         <div class='clearfix'></div>
         <div class='navbar-collapse collapse'>
@@ -20,7 +22,7 @@
                 </li>
                 <li [routerLinkActive]="['link-active']">
                     <a [routerLink]="['/vetcare']">
-                        <span class='glyphicon glyphicon-education'></span> Vet Care
+                        <span class='glyphicon glyphicon-plus-sign'></span> Vet Care
                     </a>
                 </li>
                 <li [routerLinkActive]="['link-active']">
@@ -30,7 +32,7 @@
                 </li>
                 <li [routerLinkActive]="['link-active']">
                     <a [routerLink]="['/vets']">
-                        <span class='glyphicon glyphicon-th-list'></span> Vets
+                        <span class='glyphicon glyphicon-heart-empty'></span> Vets
                     </a>
                 </li>
             </ul>

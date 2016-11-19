@@ -7,6 +7,7 @@ import { HomeComponent } from './components/home/home.component';
 import { SurgeryComponent } from './components/surgery/surgery.component';
 import { VetCareComponent } from './components/vetcare/vetcare.component';
 import { VetsComponent } from './components/vets/vets.component';
+import { FooterComponent } from './components/footer/footer.component';
 
 @NgModule({
     bootstrap: [ AppComponent ],
@@ -16,7 +17,8 @@ import { VetsComponent } from './components/vets/vets.component';
         VetCareComponent,
         SurgeryComponent,
         VetsComponent,
-        HomeComponent
+        HomeComponent,
+        FooterComponent
     ],
     imports: [
         UniversalModule, // Must be first import. This automatically imports BrowserModule, HttpModule, and JsonpModule too.
@@ -26,6 +28,7 @@ import { VetsComponent } from './components/vets/vets.component';
             { path: 'vetcare', component: VetCareComponent },
             { path: 'surgery', component: SurgeryComponent },
             { path: 'vets', component: VetsComponent },
+            { path: 'footer', component: FooterComponent },
             { path: '**', redirectTo: 'home' }
         ])
     ]
