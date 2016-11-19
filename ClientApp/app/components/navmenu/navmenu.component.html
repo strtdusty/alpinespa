@@ -1,0 +1,45 @@
+<div class='main-nav'>
+    <div class='navbar navbar-inverse'>
+        <img src="/img/logo.png" />
+        <div class='navbar-header'>
+            <button type='button' class='navbar-toggle' data-toggle='collapse' data-target='.navbar-collapse'>
+                <span class='sr-only'>Toggle navigation</span>
+                <span class='icon-bar'></span>
+                <span class='icon-bar'></span>
+                <span class='icon-bar'></span>
+            </button>
+            <a class='navbar-brand' [routerLink]="['/home']">Alpine</a>
+        </div>
+        <div class='clearfix'></div>
+        <div class='navbar-collapse collapse'>
+            <ul class='nav navbar-nav'>
+                <li [routerLinkActive]="['link-active']">
+                    <a [routerLink]="['/home']">
+                        <span class='glyphicon glyphicon-home'></span> Home
+                    </a>
+                </li>
+                <li [routerLinkActive]="['link-active']">
+                    <a [routerLink]="['/vetcare']">
+                        <span class='glyphicon glyphicon-education'></span> Vet Care
+                    </a>
+                </li>
+                <li [routerLinkActive]="['link-active']">
+                    <a [routerLink]="['/surgery']">
+                        <span class='glyphicon glyphicon-th-list'></span> Surgery
+                    </a>
+                </li>
+                <li [routerLinkActive]="['link-active']">
+                    <a [routerLink]="['/vets']">
+                        <span class='glyphicon glyphicon-th-list'></span> Vets
+                    </a>
+                </li>
+            </ul>
+            <ul class='nav navbar-nav'>
+                <li class="label">(208) 664-2168</li>
+                <li class="label">655 E Best Avenue</li>
+                <li class="label">
+                    Coeur d'Alene, ID 83814-3740
+
+                </li>
+                </ul>
+</div>
