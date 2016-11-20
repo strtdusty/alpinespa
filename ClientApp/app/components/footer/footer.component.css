@@ -3,3 +3,17 @@
     width: 80%;
     padding: 10px;
 }
+
+
+.title-median {
+    color: #636363;
+    font-size: 12px;
+    line-height: 20px;
+    margin: 0 0 0;
+    text-transform: uppercase;
+    font-family: 'Fjalla One', sans-serif;
+}
+
+.nav-footer {
+    color: white;
+}
