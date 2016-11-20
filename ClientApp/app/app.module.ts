@@ -8,11 +8,13 @@ import { SurgeryComponent } from './components/surgery/surgery.component';
 import { VetCareComponent } from './components/vetcare/vetcare.component';
 import { VetsComponent } from './components/vets/vets.component';
 import { FooterComponent } from './components/footer/footer.component';
+import { AboutComponent } from './components/about/about.component';
 
 @NgModule({
     bootstrap: [ AppComponent ],
     declarations: [
         AppComponent,
+        AboutComponent,
         NavMenuComponent,
         VetCareComponent,
         SurgeryComponent,
@@ -25,6 +27,7 @@ import { FooterComponent } from './components/footer/footer.component';
         RouterModule.forRoot([
             { path: '', redirectTo: 'home', pathMatch: 'full' },
             { path: 'home', component: HomeComponent },
+            { path: 'about', component: AboutComponent },
             { path: 'vetcare', component: VetCareComponent },
             { path: 'surgery', component: SurgeryComponent },
             { path: 'vets', component: VetsComponent },
