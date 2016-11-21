@@ -9,9 +9,10 @@ import { VetCareComponent } from './components/vetcare/vetcare.component';
 import { VetsComponent } from './components/vets/vets.component';
 import { FooterComponent } from './components/footer/footer.component';
 import { AboutComponent } from './components/about/about.component';
+import { Angulartics2Module, Angulartics2GoogleAnalytics } from 'angulartics2';
 
 @NgModule({
-    bootstrap: [ AppComponent ],
+    bootstrap: [AppComponent],
     declarations: [
         AppComponent,
         AboutComponent,
@@ -33,8 +34,10 @@ import { AboutComponent } from './components/about/about.component';
             { path: 'vets', component: VetsComponent },
             { path: 'footer', component: FooterComponent },
             { path: '**', redirectTo: 'home' }
-        ])
-    ]
+        ],
+        Angulartics2Module.forRoot())
+    ],
+    providers: [Angulartics2GoogleAnalytics]
 })
 export class AppModule {
 }
