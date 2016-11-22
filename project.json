@@ -22,13 +22,11 @@
     "Microsoft.Extensions.Logging.Debug": "1.0.0",
     "Microsoft.Extensions.Options.ConfigurationExtensions": "1.0.0"
   },
-
   "tools": {
     "Microsoft.AspNetCore.Razor.Tools": "1.0.0-preview2-final",
     "Microsoft.AspNetCore.Server.IISIntegration.Tools": "1.0.0-preview2-final",
     "Microsoft.DotNet.Watcher.Tools": "1.0.0-preview2-final"
   },
-
   "frameworks": {
     "netcoreapp1.0": {
       "imports": [
@@ -37,21 +35,21 @@
       ]
     }
   },
-
   "buildOptions": {
     "emitEntryPoint": true,
     "preserveCompilationContext": true,
     "compile": {
-      "exclude": ["node_modules"]
-    }
+      "exclude": [
+        "node_modules"
+      ]
+    },
+    "debugType": "portable"
   },
-
   "runtimeOptions": {
     "configProperties": {
       "System.GC.Server": true
     }
   },
-
   "publishOptions": {
     "include": [
       "appsettings.json",
@@ -59,22 +57,26 @@
       "node_modules",
       "Views",
       "web.config",
-      "wwwroot"
+      "wwwroot",
+      "Dockerfile.debug",
+      "Dockerfile",
+      "docker-compose.debug.yml",
+      "docker-compose.yml"
     ],
     "exclude": [
       "wwwroot/dist/*.map"
     ]
   },
-
   "scripts": {
     "prepublish": [
       "npm install",
       "node node_modules/webpack/bin/webpack.js --config webpack.config.vendor.js --env.prod",
       "node node_modules/webpack/bin/webpack.js --env.prod"
     ],
-    "postpublish": [ "dotnet publish-iis --publish-folder %publish:OutputPath% --framework %publish:FullTargetFramework%" ]
+    "postpublish": [
+      "dotnet publish-iis --publish-folder %publish:OutputPath% --framework %publish:FullTargetFramework%"
+    ]
   },
-
   "tooling": {
     "defaultNamespace": "Alpine"
   }
