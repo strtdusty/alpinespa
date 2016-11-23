@@ -15,4 +15,4 @@ RUN ["dotnet", "build"]
 ENV ASPNETCORE_URLS http://*:5000
 EXPOSE 5000/tcp
 
-ENTRYPOINT ["/bin/bash", "-c", "if [ -z \"$REMOTE_DEBUGGING\" ]; then dotnet alpineangular.dll; else sleep infinity; fi"]
+ENTRYPOINT ["dotnet", "run", "--server.urls", "http://0.0.0.0:5000"]
