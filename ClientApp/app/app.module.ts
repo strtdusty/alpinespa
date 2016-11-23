@@ -9,6 +9,7 @@ import { VetCareComponent } from './components/vetcare/vetcare.component';
 import { VetsComponent } from './components/vets/vets.component';
 import { FooterComponent } from './components/footer/footer.component';
 import { AboutComponent } from './components/about/about.component';
+import { LaserComponent } from './components/laser/laser.component';
 import { Angulartics2Module, Angulartics2GoogleAnalytics } from 'angulartics2';
 
 @NgModule({
@@ -21,6 +22,7 @@ import { Angulartics2Module, Angulartics2GoogleAnalytics } from 'angulartics2';
         SurgeryComponent,
         VetsComponent,
         HomeComponent,
+        LaserComponent,
         FooterComponent
     ],
     imports: [
@@ -33,6 +35,7 @@ import { Angulartics2Module, Angulartics2GoogleAnalytics } from 'angulartics2';
             { path: 'surgery', component: SurgeryComponent },
             { path: 'vets', component: VetsComponent },
             { path: 'footer', component: FooterComponent },
+            { path: 'laser', component: LaserComponent },
             { path: '**', redirectTo: 'home' }
         ],
         Angulartics2Module.forRoot())
