@@ -12,7 +12,9 @@ import { AboutComponent } from './components/about/about.component';
 import { LaserComponent } from './components/laser/laser.component';
 import { WifiComponent } from './components/wifi/wifi.component';
 import { Angulartics2Module, Angulartics2GoogleAnalytics } from 'angulartics2';
+import {enableProdMode} from '@angular/core';
 
+enableProdMode();
 @NgModule({
     bootstrap: [AppComponent],
     declarations: [
@@ -28,7 +30,8 @@ import { Angulartics2Module, Angulartics2GoogleAnalytics } from 'angulartics2';
         WifiComponent
     ],
     imports: [
-        UniversalModule, // Must be first import. This automatically imports BrowserModule, HttpModule, and JsonpModule too.
+        UniversalModule, // Must be first import. This automatically imports BrowserModule, HttpModule, and JsonpModule too.,
+        Angulartics2Module.forRoot(),
         RouterModule.forRoot([
             { path: '', redirectTo: 'home', pathMatch: 'full' },
             { path: 'home', component: HomeComponent },
@@ -40,8 +43,7 @@ import { Angulartics2Module, Angulartics2GoogleAnalytics } from 'angulartics2';
             { path: 'laser', component: LaserComponent },
             { path: 'wifi', component: WifiComponent },
             { path: '**', redirectTo: 'home' }
-        ],
-        Angulartics2Module.forRoot())
+        ])
     ],
     providers: [Angulartics2GoogleAnalytics]
 })
