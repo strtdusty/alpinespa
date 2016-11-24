@@ -11,6 +11,7 @@ import { FooterComponent } from './components/footer/footer.component';
 import { AboutComponent } from './components/about/about.component';
 import { LaserComponent } from './components/laser/laser.component';
 import { WifiComponent } from './components/wifi/wifi.component';
+import { Angulartics2Module, Angulartics2GoogleAnalytics } from 'angulartics2';
 
 @NgModule({
     bootstrap: [AppComponent],
@@ -40,7 +41,12 @@ import { WifiComponent } from './components/wifi/wifi.component';
             { path: 'laser', component: LaserComponent },
             { path: 'wifi', component: WifiComponent },
             { path: '**', redirectTo: 'home' }
-        ])
+        ]),
+
+        Angulartics2Module.forRoot()
+    ],
+    providers: [
+        Angulartics2GoogleAnalytics
     ]
 })
 export class AppModule {
